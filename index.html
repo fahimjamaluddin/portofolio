@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fahim Jamaluddin | Portofolio</title>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Some+Time+Later&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome for icons (online kit) -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!--
+    HALAMAN INI: Tutorial singkat ada di bagian akhir sebagai komentar HTML.
+    Cara menambah/ubah foto: cari komentar "TUTORIAL FOTO" di bawah.
+  -->
+
+  <header class="site-header">
+    <h1>Halo, Saya <span>Fahim Jamaluddin</span></h1>
+    <p>Web Developer | Atlet | Pelajar</p>
+  </header>
+
+  <nav class="site-nav">
+    <ul>
+      <li><a href="#tentang">Tentang Saya</a></li>
+      <li><a href="#proyek">Proyek</a></li>
+      <li><a href="#galeri">Galeri</a></li>
+      <li><a href="#kontak">Kontak</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="tentang" class="card reveal">
+      <h2>Tentang Saya</h2>
+      <p>Saya adalah pengembang web yang antusias dengan minat pada desain antarmuka dan teknologi web modern.</p>
+
+      <div class="foto-container">
+        <img src="foto_saya.jpeg" alt="Foto Saya" class="profile-pic spotlight" />
+        <p class="caption">Ini Saya ges</p>
+      </div>
+    </section>
+
+    <section id="proyek" class="card reveal">
+      <h2>Proyek Saya</h2>
+      <div class="project">
+        <h3>Website Sekolah</h3>
+        <p>Website informasi sekolah dengan tampilan modern dan responsif.</p>
+      </div>
+      <div class="project">
+        <h3>Aplikasi To-Do List</h3>
+        <p>Aplikasi sederhana untuk mencatat daftar kegiatan harian.</p>
+      </div>
+    </section>
+
+    <section id="galeri" class="card reveal">
+      <h2>Galeri</h2>
+      <p>Beberapa momen — kamu bisa menambahkan lebih banyak foto nantinya.</p>
+
+      <div class="gallery">
+        <!-- Gallery item 1: NBA photo with spotlight + sporty hover -->
+        <div class="gallery-item spotlight-card">
+          <img src="foto_nba.jpeg" alt="Saat bermain di Tim Wizards" class="gallery-pic" />
+          <p class="gallery-caption">Ini saya saat bermain di Tim Wizards - NBA</p>
+        </div>
+
+        <!-- Gallery item 2: empty slot (template) -->
+        <div class="gallery-item empty-slot">
+          <img src="pacar_saya.jpeg" alt="pacar sayaa" 
+          <p class="gallery-caption">cantiknyo</p>
+        </div>
+
+        <!-- Gallery item 3: empty slot (template) -->
+        <div class="gallery-item empty-slot">
+          <div class="empty-box">+ Tambah foto</div>
+          <p class="gallery-caption">Slot kosong — ganti dengan foto kamu</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontak" class="card reveal">
+      <h2>Hubungi Saya</h2>
+      <div class="social-links">
+        <a href="https://wa.me/6282193221623" target="_blank" class="social whatsapp">
+          <i class="fab fa-whatsapp"></i><span>WhatsApp: 082193221623</span>
+        </a>
+        <a href="https://instagram.com/fahimjmlddn" target="_blank" class="social instagram">
+          <i class="fab fa-instagram"></i><span>Instagram: @fahimjmlddn</span>
+        </a>
+        <a href="https://www.tiktok.com/@t0rtoisee_" target="_blank" class="social tiktok">
+          <i class="fab fa-tiktok"></i><span>TikTok: @t0rtoisee_</span>
+        </a>
+      </div>
+      <p class="email">Email: <a href="mailto:fahimjmlddn@gmail.com">fahimjmlddn@gmail.com</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 Fahim Jamaluddin. Semua hak dilindungi.</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+  <!--
+    TUTORIAL FOTO (cepat):
+    1) Simpan file foto (.jpg/.jpeg/.png) di folder yang sama dengan index.html.
+    2) Untuk menambahkan foto ke galeri, copy salah satu <div class="gallery-item">...</div>
+       dan ubah src="nama_foto.jpg" serta teks keterangan.
+    3) Untuk mengganti foto di bagian 'Tentang Saya', ganti file foto_saya.jpeg dengan file baru
+       atau ubah atribut src pada <img class="profile-pic"> di index.html.
+    4) Simpan lalu refresh browser (F5) untuk melihat perubahan.
+  -->
+</body>
+</html>

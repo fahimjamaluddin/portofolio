@@ -1,0 +1,91 @@
+/* Dark mode elegan styles */
+:root{
+  --bg: #0b0b0b;
+  --card: #121212;
+  --muted: #a8a8a8;
+  --accent: #4e9eff;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: 'Some Time Later', sans-serif;
+  background: radial-gradient(1200px 400px at 10% 10%, rgba(78,158,255,0.04), transparent), var(--bg);
+  color: #e8e8e8;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.6;
+}
+
+/* Header */
+.site-header{
+  text-align:center;
+  padding:64px 20px;
+  background:linear-gradient(180deg, #0f0f0f 0%, #131313 100%);
+  font-family: 'Anton', sans-serif;
+  letter-spacing:1px;
+}
+.site-header span{color:var(--accent)}
+
+/* Nav */
+.site-nav{
+  background:#0f0f0f;
+  border-top:1px solid rgba(255,255,255,0.02);
+  border-bottom:1px solid rgba(255,255,255,0.02);
+  position:sticky; top:0; z-index:50;
+}
+.site-nav ul{list-style:none;margin:0;padding:10px 0;text-align:center}
+.site-nav a{color:var(--muted);text-decoration:none;margin:0 18px;font-weight:700;display:inline-block;transition:color .25s}
+.site-nav a:hover{color:var(--accent)}
+
+/* Card sections */
+main{padding:40px 20px;max-width:1100px;margin:0 auto}
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.015));padding:36px;border-radius:14px;margin-bottom:28px;box-shadow:0 8px 30px rgba(0,0,0,0.6)}
+
+/* Projects */
+.project{background:#151515;padding:18px;border-radius:10px;margin-bottom:12px}
+
+/* Foto about */
+.foto-container{display:flex;flex-direction:column;align-items:center;margin-top:18px}
+.profile-pic{width:240px;height:auto;border-radius:16px;box-shadow:0 12px 40px rgba(78,158,255,0.12);transition:transform .45s ease, box-shadow .45s ease}
+.profile-pic:hover{transform:translateY(-6px) scale(1.03);box-shadow:0 18px 50px rgba(78,158,255,0.22)}
+
+/* caption */
+.caption{margin-top:12px;color:var(--accent);font-weight:700}
+
+/* Gallery */
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:18px}
+.gallery-item{background:#0f0f0f;border-radius:12px;padding:12px;display:flex;flex-direction:column;align-items:center;transition:transform .35s,box-shadow .35s}
+.gallery-pic{width:100%;height:200px;object-fit:cover;border-radius:10px;box-shadow:0 8px 30px rgba(0,0,0,0.6);transition:transform .45s,filter .45s}
+.gallery-item:hover .gallery-pic{transform:scale(1.04) rotate(-0.5deg);filter:brightness(1.03)}
+
+/* Spotlight card: darker backdrop and subtle glow */
+.spotlight-card{background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));position:relative;overflow:hidden}
+.spotlight-card::after{content:'';position:absolute;inset:0;background:radial-gradient(400px 120px at 50% 20%, rgba(78,158,255,0.04), transparent);pointer-events:none}
+.gallery-caption{margin-top:10px;color:var(--muted);font-weight:600;text-align:center}
+
+/* empty slot */
+.empty-slot{display:flex;flex-direction:column;justify-content:center;align-items:center;height:200px;border:2px dashed rgba(255,255,255,0.03)}
+.empty-box{padding:12px 16px;border-radius:8px;background:transparent;color:var(--muted);font-weight:700}
+
+/* Social links */
+.social-links{display:flex;flex-direction:column;gap:12px;margin-top:12px}
+.social{display:flex;align-items:center;gap:12px;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700;color:inherit;transition:transform .25s,box-shadow .25s}
+.social i{font-size:20px}
+.whatsapp{color:#25D366}
+.instagram{color:#E4405F}
+.tiktok{color:#000; /* will be visually represented by icon */ background:linear-gradient(45deg,#ff0050,#00f2ea); -webkit-background-clip:text; -webkit-text-fill-color:transparent}
+
+/* Footer */
+.site-footer{padding:28px;text-align:center;color:var(--muted);font-size:14px}
+
+/* Reveal animation */
+.reveal{opacity:0;transform:translateY(18px);transition:all .8s cubic-bezier(.2,.9,.2,1)}
+.reveal.show{opacity:1;transform:none}
+
+/* Responsive tweaks */
+@media (max-width:720px){
+  .site-header{padding:40px 16px}
+  .profile-pic{width:180px}
+  .gallery-pic{height:160px}
+}
